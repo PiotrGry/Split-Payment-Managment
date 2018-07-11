@@ -1,7 +1,3 @@
-
-var table = document.getElementById("table").addEventListener("click", receiptBox);
-var closeReceiptBox = document.getElementById("receipt-box").addEventListener("dblclick", receiptBox);
-
 function receiptBox() {
     var receiptBox = document.getElementById("receipt-box");
     if(receiptBox.style.display === "none"){
@@ -51,5 +47,6 @@ window.onclick = function(event) {
 
 var add = document.getElementById("plus");
 add.onclick = function(){
-    alert("it works !");
+    receiptBox();
+}
 }
