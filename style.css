@@ -4,8 +4,32 @@ body{
 
 }
 
+.jumbotron {
+    background: #8cb1d2;
+    padding: 2rem;
+}
+.fa-columns{
+    font-size: 16rem;
 
-.fas{
+}
+.jumbotron p {
+    color: #1e691d;
+    text-align: center;
+
+}
+.h2,h1 {
+    color: #1e691d;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.h2,h3 {
+    color: #799cbf;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.fa-circle{
     color: black;
 }
 
@@ -65,16 +89,18 @@ ul li:hover {
 
 /* Modal Content/Box */
 .modal-content {
-
     border: 1px solid #888;
-    /*width: 80%; /* Could be more or less, depending on screen size */*/
     height: inherit;
 }
-/*.modal-header h2{
+.modal-header{
+    display:block;
+}
+.upper-bar-modal-content{
+    padding-left: 1%;
+    padding-right: 1%;
+}
 
-    text-align: center !important;
-    padding: 0px !important;
-}*/
+
 
 /* The Close Button */
 #plus{
