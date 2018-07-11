@@ -25,7 +25,7 @@ var modal = document.getElementById('myModal');
 var btn = document.getElementById("table");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("modal-close")[0];
 
 
 // When the user clicks on the button, open the modal
@@ -39,7 +39,7 @@ span.onclick = function() {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+widnow.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
