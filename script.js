@@ -1,2 +1,6 @@
-var table = document.getElementByClass("btn");
-table.style.backgroundColor =  "ff3333";
+
+var table = document.getElementById("table").addEventListener("click", alertFunction);
+
+function alertFunction(){
+    alert("CLICKING WORKS")
+}
