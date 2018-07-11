@@ -1,10 +1,7 @@
 function receiptBox() {
     var receiptBox = document.getElementById("receipt-box");
-    if(receiptBox.style.display === "none"){
-        receiptBox.style.display = "block";
-    }else {
-        receiptBox.style.display = "none";
-    }
+    receiptBox.style.display = "block";
+
 }
 
 /* Get all elements with class="close" */
@@ -38,14 +35,9 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-widnow.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 
 var add = document.getElementById("plus");
+
 add.onclick = function(){
     receiptBox();
 }
