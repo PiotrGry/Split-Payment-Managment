@@ -7,7 +7,7 @@
     position: absolute;
     z-index: 9;
     background-color: #ffffff;
-    border: 1px solid #e6b800;
+    border: 1px solid #66a3ff;
     text-align: center;
     display: none;
     box-sizing: border-box;
@@ -17,8 +17,9 @@
     padding: 10px;
     /* cursor: move; */
     z-index: 10;
-    background-color:#e6b800;
-    color: #fff;
+    background-color: #66a3ff;
+    color: #f2f2f2;
+    /* color: #fff; */
 }
 
 ul {
@@ -70,20 +71,29 @@ ul li:hover {
 }
 
 /* The Close Button */
-.modal-close  {
-    color: #aaa;
+#plus{
+    /* box-sizing: content-box !important; */
+    padding-right: 10px;
+    color: #595959;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    width: auto;}
+
+#modal-close  {
+    padding-left: 10px;
+    color: #595959;
     float: right;
     font-size: 28px;
     font-weight: bold;
     width: auto;
 }
 
-.modal-close:hover,
-.modal-close:focus {
+#plus:hover,
+#plus:focus ,
+#modal-close:hover,
+#modal-close:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
-}
-#plus:hover{
     cursor: pointer;
 }
