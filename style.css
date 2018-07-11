@@ -1,6 +1,7 @@
 body{
     padding: 2%;
     margin: 2% auto;
+    background-color: #6f9cc3;
 
 }
 
@@ -15,12 +16,14 @@ body{
 .jumbotron p {
     color: #1e691d;
     text-align: center;
+    vertical-align: middle;
 
 }
 .h2,h1 {
     color: #1e691d;
     text-align: center;
     font-size: 3rem;
+    vertical-align: middle;
 }
 
 .h2,h3 {
@@ -30,7 +33,7 @@ body{
 }
 
 .fa-circle{
-    color: black;
+    color: #dc3545;
 }
 
 #receipt-box {
