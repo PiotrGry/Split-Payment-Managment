@@ -1,7 +1,6 @@
 function receiptBox(display) {
     var receiptBox = document.getElementById("receipt-box");
     receiptBox.style.display = display;
-
 }
 
 /* Get all elements with class="close" */
@@ -13,6 +12,7 @@ for (i = 0; i < closebtns.length; i++) {
   closebtns[i].addEventListener("click", function() {
   this.parentElement.style.display = 'none';
 });
+}
 
 
 // Get the modal
@@ -23,7 +23,6 @@ var btn = document.getElementById("table");
 
 // Get the <span> element that closes the modal
 var modalClose = document.getElementById("modal-close");
-var receiptClose = document.getElementById("receipt-close");
 
 
 // When the user clicks on the button, open the modal
@@ -36,14 +35,10 @@ modalClose.onclick = function() {
     modal.style.display = "none";
 }
 
-receiptClose.onclick = function() {
-    receiptBox("none");
-}
-
 
 var add = document.getElementById("plus");
-}
+
 
 add.onclick = function(){
-    receiptBox("block");
+    createReceipt();
 }
