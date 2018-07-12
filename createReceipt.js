@@ -4,14 +4,19 @@ function createReceipt(){
     receiptCol.id = "receipt-col";
     receiptCol.className += "col-md-4";
 
+    var row = document.getElementById("receipt-row");
+    row.appendChild(receiptCol);
 
     var divElement = document.createElement("Div");
-        divElement.id = "receipt-box";
-        receiptCol.appendChild(divElement); //addng as child to divCol
+        divElement.className += "receipt-box";
+
+    receiptCol.appendChild(divElement); //addng as child to divCol
 
     // Creating header with id
     var divHeader = document.createElement("Div");
         divHeader.id = "receipt-box-header";
+
+        divElement.appendChild(divHeader);
 
     //Creating close icon
     var spanCloseReceipt = document.createElement("Span");
@@ -21,20 +26,25 @@ function createReceipt(){
     //Add function to remove receipt box to close icon
     spanCloseReceipt.addEventListener("click", removeReceipt);
          function removeReceipt() {
-             var list=document.getElementById("receipt-box");
+             var list=document.getElementsByClassName("receipt-box")[0];
                 list.parentNode.removeChild(list);
+
         }
+
+        divHeader.appendChild(spanCloseReceipt);
+
 
     //Creating add icon
     var spanAddReceipt = document.createElement("Span");
         spanAddReceipt.id = "receipt-plus";
         spanAddReceipt.className += "fas fa-plus-square";
 
+        divHeader.appendChild(spanAddReceipt);
+    // spanCloseReceipt.addEventListener("click", addReceipt);
+    //      function addReceipt() {
+    //         createReceipt();
+    //     }
 
-    //Appending childs to respective parents
-    divHeader.appendChild(spanCloseReceipt);
-    divHeader.appendChild(spanAddReceipt);
-    divElement.appendChild(divHeader);
 
 
     //Creating and adding list with placeholder
@@ -53,6 +63,8 @@ function createReceipt(){
     li.appendChild(textL1);
     li.appendChild(liCloseSpan);
     liCloseSpan.appendChild(closeSpanText);
+
+
 
     //Adding new div to body;
     document.getElementsByClassName("recepit-content")[0].appendChild(divElement);
