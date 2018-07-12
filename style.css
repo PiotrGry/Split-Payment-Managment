@@ -106,6 +106,7 @@ ul li:hover {
 
 
 /* The Close Button */
+
 #plus{
     /* box-sizing: content-box !important; */
     padding-right: 10px;
@@ -115,6 +116,7 @@ ul li:hover {
     font-weight: bold;
     width: auto;}
 
+#receipt-close,
 #modal-close  {
     padding-left: 10px;
     color: #595959;
