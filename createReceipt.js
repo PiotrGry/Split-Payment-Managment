@@ -1,4 +1,7 @@
 // Creating a div element
+
+var idCounterOrder = 0;
+var idCounterReceipt = 0;
 function createReceipt(){
 
 
@@ -40,7 +43,14 @@ function createReceipt(){
 
         //Creating and adding list with placeholder
         var list = document.createElement("Ul");
-        list.id = "orderList"
+        list.id= idCounterReceipt;
+        idCounterReceipt++;
+        var att = document.createAttribute("ondrop");
+        att.value = "drop(event)";
+        list.setAttributeNode(att);
+        var att1 = document.createAttribute("ondragover");
+        att1.value = "allowDrop(event)";
+        list.setAttributeNode(att1);
         divElement.appendChild(list);
 
     //Creating add icon
@@ -51,15 +61,19 @@ function createReceipt(){
 
         spanAddReceipt.onclick =  function(){
             var li = document.createElement("Li");
-            li.id = "placeholder";
+            li.id = idCounterOrder;
+            idCounterOrder++;
+            var att = document.createAttribute("draggable");
+            att.value = "true";
+            li.setAttributeNode(att);
+            var att1 = document.createAttribute("ondragstart");
+            att1.value = "drag(event)";
+            li.setAttributeNode(att1);
             var textL1 = document.createTextNode("Placeholder");
             var liCloseSpan = document.createElement("Span");
             liCloseSpan.classList.add("close");
             var closeSpanText = document.createTextNode("x");
-            console.log("dupa");
             list.appendChild(li);
-                console.log("dupa za appendem");
-
             li.appendChild(textL1);
             li.appendChild(liCloseSpan);
             liCloseSpan.appendChild(closeSpanText);
@@ -71,5 +85,3 @@ function createReceipt(){
     //Adding new div to receipr-row;
     document.getElementById("receipt-row").appendChild(receiptCol);
 }
-
-    
