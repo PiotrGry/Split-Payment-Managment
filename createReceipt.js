@@ -1,16 +1,21 @@
 // Creating a div element
 function createReceipt(){
+
+    // jako pierwsze
     var receiptCol = document.createElement("Div");
     receiptCol.id = "receipt-col";
     receiptCol.className += "col-md-4";
 
-    var row = document.getElementById("receipt-row");
-    row.appendChild(receiptCol);
+// dwa
+    var thumbnail = document.createElement("Div");
+    thumbnail.className += "thumbnail";
+    receiptCol.appendChild(thumbnail);
+
 
     var divElement = document.createElement("Div");
         divElement.className += "receipt-box";
 
-    receiptCol.appendChild(divElement); //addng as child to divCol
+    thumbnail.appendChild(divElement); //addng as child to divCol
 
     // Creating header with id
     var divHeader = document.createElement("Div");
@@ -65,7 +70,9 @@ function createReceipt(){
     liCloseSpan.appendChild(closeSpanText);
 
 
+    // var row = document.getElementById("receipt-row");
+    // row.appendChild(receiptCol);
 
     //Adding new div to body;
-    document.getElementsByClassName("recepit-content")[0].appendChild(divElement);
+    document.getElementById("receipt-row").appendChild(receiptCol);
 }
