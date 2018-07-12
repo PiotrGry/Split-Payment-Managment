@@ -40,9 +40,10 @@ receiptClose.onclick = function() {
     receiptBox("none");
 }
 
-add.onclick = function(){
-    receiptBox("block");
-}
 
 var add = document.getElementById("plus");
+}
+
+add.onclick = function(){
+    receiptBox("block");
 }
