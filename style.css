@@ -42,17 +42,15 @@ body{
     background-color: #ffffff;
     border: 1px solid #66a3ff;
     text-align: center;
-    display: none;
+    display: block;
     box-sizing: border-box;
 }
 
 #receipt-box-header {
     padding: 10px;
-    /* cursor: move; */
     z-index: 10;
     background-color: #66a3ff;
     color: #f2f2f2;
-    /* color: #fff; */
 }
 
 ul {
@@ -61,11 +59,11 @@ ul {
   margin: 0 !important;
 }
 
-/* Style the list items */
+
 ul li {
-  border: 1px solid #ddd;
+  border: 1px solid #ddd; */
   margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
+   background-color: #f6f6f6;
   padding: 10px;
   text-decoration: none;
   font-size: 15px;
@@ -104,13 +102,25 @@ ul li:hover {
 }
 
 
-
+.close{
+    padding-left: 10px;
+}
 /* The Close Button */
+
 #plus{
     /* box-sizing: content-box !important; */
     padding-right: 10px;
     color: #595959;
     float: left;
+    font-size: 28px;
+    font-weight: bold;
+    width: auto;
+}
+
+#receipt-plus{
+    padding-right: 10px;
+    color: #595959;
+    /* float: left; */
     font-size: 28px;
     font-weight: bold;
     width: auto;
@@ -125,6 +135,7 @@ ul li:hover {
     font-weight: bold;
     width: auto;
 }
+#receipt-plus:hover,
 #receipt-close:hover,
 #plus:hover,
 #plus:focus ,
