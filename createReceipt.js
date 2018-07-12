@@ -31,7 +31,7 @@ function createReceipt(){
     //Add function to remove receipt box to close icon
     spanCloseReceipt.addEventListener("click", removeReceipt);
          function removeReceipt() {
-             var list=document.getElementsByClassName("receipt-box")[0];
+             var list=document.getElementById("receipt-col");
                 list.parentNode.removeChild(list);
 
         }
