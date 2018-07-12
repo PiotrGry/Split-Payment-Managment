@@ -57,6 +57,8 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0 !important;
+  height: 10rem;
+  background-color: red;
 }
 
 
@@ -70,6 +72,7 @@ ul li {
   color: black;
   display: block;
   position: relative;
+
 }
 
 /* Add a light grey background color on hover */

@@ -5,10 +5,9 @@ function receiptBox(display) {
 
 /* Get all elements with class="close" */
 var closebtns = document.getElementsByClassName("close");
-var i;
 
 /* Loop through the elements, and hide the parent, when clicked on */
-for (i = 0; i < closebtns.length; i++) {
+for (var i = 0; i < closebtns.length; i++) {
   closebtns[i].addEventListener("click", function() {
   this.parentElement.style.display = 'none';
 });
@@ -41,4 +40,21 @@ var add = document.getElementById("plus");
 
 add.onclick = function(){
     createReceipt();
+}
+
+// =============================================================
+                    // DRAG
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
 }
