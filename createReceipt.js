@@ -1,41 +1,59 @@
 // Creating a div element
 function createReceipt(){
+    var receiptCol = document.createElement("Div");
+    receiptCol.id = "receipt-col";
+    receiptCol.className += "col-md-4";
+
+
     var divElement = document.createElement("Div");
         divElement.id = "receipt-box";
+        receiptCol.appendChild(divElement); //addng as child to divCol
 
-        // Styling it OPTIONAL ???
-        // divElement.style.position = "absolute";
-        // divElement.style.zIndex = 9;
-        // divElement.style.backgroundColor = "#ffffff";
-        // divElement.style.border = "1px", "solid", "#66a3ff";
-        // divElement.style.textAlign = "center";
-        // divElement.style.display = "block";
-        // divElement.style.boxSizing = "border-box";
-
-    // Creating and adding header and spans to it
+    // Creating header with id
     var divHeader = document.createElement("Div");
         divHeader.id = "receipt-box-header";
 
-    var spanClose = document.createElement("Span");
-        spanClose.id = "modal-close";
-        spanClose.classList.add("far_fa-window-close");
+    //Creating close icon
+    var spanCloseReceipt = document.createElement("Span");
+        spanCloseReceipt.id = "receipt-close";
+        spanCloseReceipt.className += "far fa-window-close";
 
-    var spanAdd = document.createElement("Span");
-        spanAdd.id = "plus";
-        spanAdd.classList.add("fas_fa-plus-square");
+    //Add function to remove receipt box to close icon
+    spanCloseReceipt.addEventListener("click", removeReceipt);
+         function removeReceipt() {
+             var list=document.getElementById("receipt-box");
+                list.parentNode.removeChild(list);
+        }
 
-    divHeader.appendChild(spanClose);
-    divHeader.appendChild(spanAdd);
+    //Creating add icon
+    var spanAddReceipt = document.createElement("Span");
+        spanAddReceipt.id = "receipt-plus";
+        spanAddReceipt.className += "fas fa-plus-square";
+
+
+    //Appending childs to respective parents
+    divHeader.appendChild(spanCloseReceipt);
+    divHeader.appendChild(spanAddReceipt);
     divElement.appendChild(divHeader);
 
-    //Creating and adding empty list
+
+    //Creating and adding list with placeholder
     var list = document.createElement("Ul");
-        divElement.appendChild(list);
+    divElement.appendChild(list);
+
+    // TODO: Filling should be automatic
     var li = document.createElement("Li");
-    var text = document.createTextNode("Another paragraph, yay!");
+    li.id = "placeholder";
+    var textL1 = document.createTextNode("Placeholder");
+    var liCloseSpan = document.createElement("Span");
+        liCloseSpan.classList.add("close");
+        var closeSpanText = document.createTextNode("x");
+
     list.appendChild(li);
-    li.appendChild(text);
+    li.appendChild(textL1);
+    li.appendChild(liCloseSpan);
+    liCloseSpan.appendChild(closeSpanText);
 
     //Adding new div to body;
-    document.getElementsByTagName("body")[0].appendChild(divElement);
+    document.getElementsByClassName("recepit-content")[0].appendChild(divElement);
 }
