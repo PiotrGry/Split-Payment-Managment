@@ -1,5 +1,16 @@
+
 import * as closeBtn  from './closeReceiptBox.js';
 import * as ReceiptOperation from './createReceipt.js'
+import * as receiptView from './receiptView.js';
+
+function receiptBox(display) {
+    var receiptBox = document.getElementById("receipt-box");
+    receiptBox.style.display = display;
+}
+
+/* Get all elements with class="close" */
+var closebtns = document.getElementsByClassName("close");
+
 
 
 closeBtn.closeReceiptBox();
@@ -29,7 +40,11 @@ var add = document.getElementById("plus");
 
 
 add.onclick = function(){
+
     ReceiptOperation.createReceipt();
+
+    // receiptView.render();
+
 }
 
 // =============================================================
