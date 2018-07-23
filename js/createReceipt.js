@@ -45,10 +45,10 @@ export function createReceipt(){
             list.id= idCounterReceipt;
             idCounterReceipt+=2 ;
             var att = document.createAttribute("ondrop");
-            att.value = "drop(event)";
+            att.value = "window.drop(event)";
             list.setAttributeNode(att);
             var att1 = document.createAttribute("ondragover");
-            att1.value = "allowDrop(event)";
+            att1.value = "window.allowDrop(event)";
             list.setAttributeNode(att1);
             divElement.appendChild(list);
 
