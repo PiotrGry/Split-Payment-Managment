@@ -1,6 +1,6 @@
 // Creating a div element
 
-var idCounterOrder = 0;
+var idCounterOrder = 1;
 var idCounterReceipt = 0;
 function createReceipt(){
 
@@ -44,7 +44,7 @@ function createReceipt(){
         //Creating and adding list with placeholder
         var list = document.createElement("Ul");
         list.id= idCounterReceipt;
-        idCounterReceipt++;
+        idCounterReceipt+=2 ;
         var att = document.createAttribute("ondrop");
         att.value = "drop(event)";
         list.setAttributeNode(att);
@@ -62,7 +62,7 @@ function createReceipt(){
         spanAddReceipt.onclick =  function(){
             var li = document.createElement("Li");
             li.id = idCounterOrder;
-            idCounterOrder++;
+            idCounterOrder+=2;
             var att = document.createAttribute("draggable");
             att.value = "true";
             li.setAttributeNode(att);
