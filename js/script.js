@@ -3,6 +3,20 @@ import * as closeBtn  from './closeReceiptBox.js';
 import * as ReceiptOperation from './createReceipt.js'
 import * as receiptView from './receiptView.js';
 
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+
 function receiptBox(display) {
     var receiptBox = document.getElementById("receipt-box");
     receiptBox.style.display = display;
@@ -49,17 +63,3 @@ add.onclick = function(){
 
 // =============================================================
                     // DRAG
-
-function allowDrop(ev) {
-    ev.preventDefault();
-}
-
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
