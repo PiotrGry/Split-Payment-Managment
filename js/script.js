@@ -1,3 +1,5 @@
+import * as receiptView from './receiptView.js';
+
 function receiptBox(display) {
     var receiptBox = document.getElementById("receipt-box");
     receiptBox.style.display = display;
@@ -39,7 +41,7 @@ var add = document.getElementById("plus");
 
 
 add.onclick = function(){
-    createReceipt();
+    receiptView.render();
 }
 
 // =============================================================
