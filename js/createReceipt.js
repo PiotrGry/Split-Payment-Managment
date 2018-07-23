@@ -1,8 +1,6 @@
-// Creating a div element
-
-var idCounterOrder = 1;
-var idCounterReceipt = 0;
-function createReceipt(){
+export function createReceipt(){
+    var idCounterOrder = 1;
+    var idCounterReceipt = 0;
 
 
     var receiptCol = document.createElement("Div");
