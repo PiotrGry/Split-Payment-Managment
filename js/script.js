@@ -1,4 +1,24 @@
+
+import * as closeBtn  from './closeReceiptBox.js';
+import * as ReceiptOperation from './createReceipt.js'
 import * as receiptView from './receiptView.js';
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+window.allowDrop = allowDrop;
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+window.drag = drag;
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+window.drop = drop;
 
 function receiptBox(display) {
     var receiptBox = document.getElementById("receipt-box");
@@ -8,13 +28,9 @@ function receiptBox(display) {
 /* Get all elements with class="close" */
 var closebtns = document.getElementsByClassName("close");
 
-/* Loop through the elements, and hide the parent, when clicked on */
-for (var i = 0; i < closebtns.length; i++) {
-  closebtns[i].addEventListener("click", function() {
-  this.parentElement.style.display = 'none';
-});
-}
 
+
+closeBtn.closeReceiptBox();
 
 // Get the modal
 var modal = document.getElementById('myModal');
@@ -41,22 +57,12 @@ var add = document.getElementById("plus");
 
 
 add.onclick = function(){
-    receiptView.render();
+
+    ReceiptOperation.createReceipt();
+
+    // receiptView.render();
+
 }
 
 // =============================================================
                     // DRAG
-
-function allowDrop(ev) {
-    ev.preventDefault();
-}
-
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
