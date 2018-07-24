@@ -5,35 +5,17 @@ body{
 
 }
 
-.jumbotron {
-    background: #8cb1d2;
-    padding: 2rem;
-}
-.fa-columns{
-    font-size: 16rem;
+.table-draggable{
+    color: white;
+    position: absolute;
 
 }
-.jumbotron p {
-    color: #1e691d;
-    text-align: center;
-    vertical-align: middle;
 
-}
-.h2,h1 {
-    color: #1e691d;
-    text-align: center;
-    font-size: 3rem;
-    vertical-align: middle;
-}
-
-.h2,h3 {
-    color: #799cbf;
-    text-align: center;
-    font-size: 3rem;
-}
-
-.fa-circle{
-    color: #dc3545;
+#table{
+	border: solid 1px #555;
+	background-color: #eed;
+	box-shadow: 10px -10px  rgba(0,0,0,0.6);
+	border-radius:100px;
 }
 
 #receipt-box {
