@@ -44,12 +44,12 @@ export function createReceipt(){
             var list = document.createElement("Ul");
             list.id= idCounterReceipt;
             idCounterReceipt+=2 ;
-            var att = document.createAttribute("ondrop");
-            att.value = "window.drop(event)";
-            list.setAttributeNode(att);
-            var att1 = document.createAttribute("ondragover");
-            att1.value = "window.allowDrop(event)";
-            list.setAttributeNode(att1);
+            list.addEventListener("drop", function(e){
+               drop(e);
+            });
+            list.addEventListener("dragover", function(e){
+               allowDrop(e);
+            });
             divElement.appendChild(list);
 
         //Creating add icon
