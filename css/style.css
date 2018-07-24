@@ -65,8 +65,9 @@ ul li:hover {
 
 
 
-.close{
-    padding-left: 10px;
+#plus-button{
+    background-color: transparent;
+    border: none;
 }
 /* The Close Button */
 
