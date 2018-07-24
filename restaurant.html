@@ -13,54 +13,20 @@
     <title>Split-Payment-Manager</title>
  </head>
  <body>
-     <div class="container">
-         <div class="jumbotron">
-             <div class="row">
-                 <div class="col-md-4">
-                     <i class="fas fa-columns"></i>
-                 </div>
-                 <div class="col-md-8">
-                     <h1>Welcome in Split Management System</h1>
-                      <p>At last splitting your receipt is possible !</p>
-                  </div>
-             </div>
-         </div>
-
-        <div class="row">
-            <div class="col-md-2 col-sm-2">
-                <div class="table-draggable">
-                    <i id="table" class="fas fa-circle fa-4x"></i>
-                <div class="table-draggable">
-            </div>
-            <div class="col-md-10 col-sm-10">
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <div class="upper-bar-modal-content">
-                           <span id="modal-close" class="far fa-window-close"></span>
-                           <span id="plus" class="fas fa-plus-square"></span>
-                       </div>
-                        <div class="modal-header">
-                            <h3>Table name</h3>
-                        </div>
-
-                        <div class="recepit-content">
-                            <div id= "receipt-row" class="row">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+     <div class="col-md-12 col-sm-12">
+        <div draggable="true" class="table-draggable" id="drag-table">
+            <i id="table" class="fas fa-circle fa-4x"></i>
         </div>
      </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/tableController.js" type="module"></script>
     <script src="js/receiptView.js" type="module"></script>
      <script src="js/script.js" type="module"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 
   </body>
 
