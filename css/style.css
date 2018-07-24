@@ -62,29 +62,7 @@ ul li:hover {
   background-color: #eee;
 }
 /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: sticky; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    /* width: auto; /* Full width */ */
-    height: auto; /* Full height */
-    overflow:visible; /* Enable scroll if needed */
-}
 
-/* Modal Content/Box */
-.modal-content {
-    border: 1px solid #888;
-    height: inherit;
-}
-.modal-header{
-    display:block;
-}
-.upper-bar-modal-content{
-    padding-left: 1%;
-    padding-right: 1%;
-}
 
 
 .close{
