@@ -14,6 +14,8 @@ body{
     text-shadow: 2px 2px 4px #000000;
     border: 0.5px solid white;
     border-radius: 3px;
+    font-family: Bookman;
+	text-transform: uppercase;
 
 /* light blue: 181, 225, 223, 0.85 */
 }
@@ -23,6 +25,7 @@ body{
     color: white;
     border: 2px solid white;
     text-shadow: 2px 2px 4px #000000;
+    text-transform: uppercase;
 
 }
 
@@ -34,7 +37,7 @@ img{
     height: 150px;
     width: 150px;
     color: white;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 
