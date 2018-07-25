@@ -1,11 +1,15 @@
-class TableModel{
+export class TableModel{
     constructor(name){
-        this.name = name;
+        this._name = name;
         this.receipts = []
     }
 
     getName(){
-        return this.name;
+        return this._name;
+    }
+
+    getId(){ //Should run on childNode list of container its in
+        return this._id;
     }
 
     showAllReceipts(){
@@ -15,6 +19,6 @@ class TableModel{
     }
 
     setName(newName){
-        this.name = newName;
+        this._name = newName;
     }
 }
