@@ -1,4 +1,4 @@
-export function tableViewRender(){
+export function ModalViewRender(){
     return
     `<!-- Button trigger modal -->
 <button type="button" class="btn btn-primary button-table" data-toggle="modal" data-target="#exampleModalCenter">
