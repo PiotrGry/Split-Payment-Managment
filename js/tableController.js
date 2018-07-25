@@ -2,8 +2,14 @@
 
 export class TableController{
 
-    dragElement() {
-      var elmnt = document.getElementById("drag-table");
+    dragElement(e) {
+
+        // if(e.target !== e.currentTarget){
+        //     var elmnt = parseInt(e.target.id);
+
+      var elmnt = document.getElementById(e.target.id);
+
+
       var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
       elmnt.onmousedown = dragMouseDown;
 
