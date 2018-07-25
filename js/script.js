@@ -2,8 +2,20 @@
 import * as closeBtn  from './closeReceiptBox.js';
 import * as ReceiptOperation from './createReceipt.js'
 import * as receiptView from './receiptView.js';
-import * as tableController from './tableController.js';
+import {TableView} from './tableView.js';
+import {TableController} from './tableController.js';
 
+
+document.getElementById("show-menu").addEventListener("click", addTable);
+
+function addTable(){
+    console.log("Add table: 1");
+    let container = document.getElementsByClassName("table-container")[0];
+    let tableController = new TableController();
+    let tableView = new TableView(tableController);
+    container.appendChild(tableView.element);
+    console.log("Add table: 2");
+}
 function allowDrop(ev) {
     ev.preventDefault();
 }
