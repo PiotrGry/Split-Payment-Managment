@@ -120,6 +120,7 @@ ul li:hover {
     font-weight: bold;
     width: auto;
 }
+
 #receipt-plus:hover,
 #receipt-close:hover,
 #plus:hover,
@@ -129,4 +130,8 @@ ul li:hover {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+.fade:not(.show){
+    opacity: 1;
+    transition: opacity .15s linear;
 }

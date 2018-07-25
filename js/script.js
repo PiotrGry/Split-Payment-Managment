@@ -27,3 +27,10 @@ function receiptBox(display) {
 }
 
 var add = document.getElementById("plus");
+
+document.getElementById("drag-table").addEventListener("dblclick",function displayModal(){
+    document.getElementById("modal-center").style.display= "block";
+});
+document.getElementById("close-modal-button").addEventListener("click",function hideModal(){
+    document.getElementById("modal-center").style.display= "none";
+});
