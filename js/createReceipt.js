@@ -82,5 +82,5 @@ export function createReceipt(){
 
 
         //Adding new div to receipr-row;
-        document.getElementById("receipt-row").appendChild(receiptCol);
+        // document.getElementById("receipt-row").appendChild(receiptCol);
     }
