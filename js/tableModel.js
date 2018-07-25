@@ -17,5 +17,4 @@ class TableModel{
     setName(newName){
         this.name = newName;
     }
-
 }

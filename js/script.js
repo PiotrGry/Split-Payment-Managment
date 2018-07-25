@@ -26,11 +26,11 @@ function receiptBox(display) {
     receiptBox.style.display = display;
 }
 
-/* Get all elements with class="close" */
-var closebtns = document.getElementsByClassName("close");
-
-// Get the button that opens the modal
-var btn = document.getElementById("table");
-
-
 var add = document.getElementById("plus");
+
+document.getElementById("drag-table").addEventListener("dblclick",function displayModal(){
+    document.getElementById("modal-center").style.display= "block";
+});
+document.getElementById("close-modal-button").addEventListener("click",function hideModal(){
+    document.getElementById("modal-center").style.display= "none";
+});
