@@ -1,22 +1,45 @@
 body{
     padding: 2%;
     margin: 2% auto;
-    background-color: #6f9cc3;
+    background-image: url("../images/floor.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.navbar{
+    margin-top: -2.5em;
+    margin-left: -1em;
+    margin-right: -1em;
+    background-color: rgba(196, 108, 73, 0.75) !important;
+    text-shadow: 2px 2px 4px #000000;
+    border: 0.5px solid white;
+    border-radius: 3px;
+    font-family: Bookman;
+	text-transform: uppercase;
+
+/* light blue: 181, 225, 223, 0.85 */
+}
+
+#log-out-btn{
+    background-color: Transparent;
+    color: white;
+    border: 2px solid white;
+    text-shadow: 2px 2px 4px #000000;
+    text-transform: uppercase;
 
 }
 
 .table-draggable{
-    color: white;
     position: absolute;
-
 }
 
-#table{
-	border: solid 1px #555;
-	background-color: #eed;
-	box-shadow: 10px -10px  rgba(0,0,0,0.6);
-	border-radius:100px;
+img{
+    height: 150px;
+    width: 150px;
+    color: white;
+    opacity: 0.9;
 }
+
 
 #receipt-box {
     position: absolute;
@@ -68,7 +91,7 @@ ul li:hover {
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    /* width: auto; /* Full width */ */
+    /* width: auto; /* Full width */
     height: auto; /* Full height */
     overflow:visible; /* Enable scroll if needed */
 }
