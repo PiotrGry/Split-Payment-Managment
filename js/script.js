@@ -13,7 +13,7 @@ var ID = function () {
   // after the decimal.
   return '_' + Math.random().toString(36).substr(2, 9);
   };
-document.getElementById("show-menu").addEventListener("click", addTable);
+document.getElementById("add-table").addEventListener("click", addTable);
 
 function addTable(){
     let container = document.getElementsByClassName("table-container")[0];
@@ -25,6 +25,32 @@ function addTable(){
     let modalView = new ModalView(modalController,tableView, ID());
     tableView.element.appendChild(modalView.element);
 }
+
+document.getElementById("edit-restaurant").addEventListener("click", dragToggle);
+
+function dragToggle(){
+    let nodes = document.getElementsByClassName("table-container")[0].childNodes;
+        for(var i=0; i<nodes.length; i++){
+            if(nodes[i].nodeName.toLowerCase() == "div") {
+                nodes[i].style.pointerEvents = "auto";
+                nodes[i].setAttribute("draggable", "true");
+            }
+        }
+    }
+
+document.getElementById("stop").addEventListener("click", stop);
+
+function stop(){
+    let nodes = document.getElementsByClassName("table-container")[0].childNodes;
+        for(var i=0; i<nodes.length; i++){
+            if(nodes[i].nodeName.toLowerCase() == "div") {
+                nodes[i].style.pointerEvents = "none";
+                nodes[i].setAttribute(false);
+            }
+        }
+    }
+
+
 function allowDrop(ev) {
     ev.preventDefault();
 }

@@ -10,7 +10,7 @@ export class TableView {
     }
     render(){
 
-        return `<div draggable="true" data-toggle = "modal" data-target="#exampleModalCenter" class="col-md-4 col-sm-4 table-draggable" id="" style="top: 313px; left: 578px;">
+        return `<div draggable="false" data-toggle = "modal" data-target="#exampleModalCenter" class="col-md-4 col-sm-4 table-draggable" id="" style="top: 313px; left: 578px;">
 
                 </div>`;
 
