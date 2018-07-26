@@ -7,7 +7,12 @@ import {TableController} from './tableController.js';
 import {ModalView} from './modalView.js';
 import {ModalController} from './modalController.js';
 //querySelectorAll
-
+var ID = function () {
+  // Math.random should be unique because of its seeding algorithm.
+  // Convert it to base 36 (numbers + letters), and grab the first 9 characters
+  // after the decimal.
+  return '_' + Math.random().toString(36).substr(2, 9);
+  };
 document.getElementById("show-menu").addEventListener("click", addTable);
 
 function addTable(){
@@ -15,9 +20,9 @@ function addTable(){
     let tableController = new TableController();
     let tableView = new TableView(tableController);
     container.appendChild(tableView.element);
-    tableView.element.setAttribute("id", tableView.id)
+    tableView.element.setAttribute("id", tableView.id);
     let modalController = new ModalController();
-    let modalView = new ModalView(modalController,tableView)
+    let modalView = new ModalView(modalController,tableView, ID());
     tableView.element.appendChild(modalView.element);
 }
 function allowDrop(ev) {
