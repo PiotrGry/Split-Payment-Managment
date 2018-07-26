@@ -4,19 +4,21 @@ import * as ReceiptOperation from './createReceipt.js'
 import * as receiptView from './receiptView.js';
 import {TableView} from './tableView.js';
 import {TableController} from './tableController.js';
+import {ModalView} from './modalView.js';
+import {ModalController} from './modalController.js';
 //querySelectorAll
 
 document.getElementById("show-menu").addEventListener("click", addTable);
 
 function addTable(){
-    console.log("Add table: 1");
     let container = document.getElementsByClassName("table-container")[0];
     let tableController = new TableController();
     let tableView = new TableView(tableController);
-    console.log(tableView.id);
     container.appendChild(tableView.element);
     tableView.element.setAttribute("id", tableView.id)
-    console.log("Add table: 2");
+    let modalController = new ModalController();
+    let modalView = new ModalView(modalController,tableView)
+    tableView.element.appendChild(modalView.element);
 }
 function allowDrop(ev) {
     ev.preventDefault();
