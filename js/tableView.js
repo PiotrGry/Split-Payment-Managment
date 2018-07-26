@@ -6,11 +6,14 @@ export class TableView {
         this.element = this.createElement();
         this.id = counterID++;
         this.addEventListeners();
+
     }
     render(){
-        return `<div draggable="true" class="col-md-4 col-sm-4 table-draggable" id="" style="top: 313px; left: 578px;">
-                    <a role="button" ><img  id="table" src="../images/table-w.png" alt="table"></a>
+        return `<div draggable="true" class=" col-md-2 col-sm-2 table-draggable" id="" style="top: 313px; left: 578px;">
+                       <img  id="table" src="../images/table-w.png" alt="table">
                 </div>`;
+
+
     }
 
     createElement(){
