@@ -9,8 +9,9 @@ export class TableView {
 
     }
     render(){
-        return `<div draggable="true" class=" col-md-2 col-sm-2 table-draggable" id="" style="top: 313px; left: 578px;">
-                       <img  id="table" src="../images/table-w.png" alt="table">
+
+        return `<div draggable="true" class="col-md-4 col-sm-4 table-draggable" id="" style="top: 313px; left: 578px;">
+
                 </div>`;
 
 

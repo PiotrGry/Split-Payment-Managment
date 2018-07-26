@@ -17,7 +17,7 @@ body{
     font-family: Bookman;
 	text-transform: uppercase;
 
-/* light blue: 181, 225, 223, 0.85 */
+
 }
 
 #log-out-btn{
@@ -29,15 +29,15 @@ body{
 
 }
 
-.table-draggable{
-    position: absolute;
-}
+.table-draggable {
+  content: "";
+  background: url(../images/table-w.png);
+  background-size: cover;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  display: block;
 
-img{
-    height: 150px;
-    width: 150px;
-    color: white;
-    opacity: 0.9;
 }
 
 
@@ -90,10 +90,8 @@ ul li:hover {
     background-color: transparent;
     border: none;
 }
-/* The Close Button */
 
 #plus{
-    /* box-sizing: content-box !important; */
     padding-right: 10px;
     color: #595959;
     float: left;
@@ -105,7 +103,6 @@ ul li:hover {
 #receipt-plus{
     padding-right: 10px;
     color: #595959;
-    /* float: left; */
     font-size: 28px;
     font-weight: bold;
     width: auto;
@@ -131,7 +128,6 @@ ul li:hover {
     text-decoration: none;
     cursor: pointer;
 }
-.fade:not(.show){
+.fade:not(.show) {
     opacity: 1;
-    transition: opacity .15s linear;
 }
