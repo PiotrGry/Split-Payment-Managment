@@ -9,7 +9,6 @@ export class TableView {
     }
     render(){
         return `<div draggable="true" class="col-md-4 col-sm-4 table-draggable" id="" style="top: 313px; left: 578px;">
-                    <a role="button" ><img  id="table" src="../images/table-w.png" alt="table"></a>
                 </div>`;
     }
 
@@ -25,3 +24,4 @@ export class TableView {
     }
 
 }
+// <a role="button" id="a-table"><img  id="table" src="../images/table-w.png" alt="table"></a>
