@@ -17,7 +17,9 @@ export class TableModel{
             console.log(this.receipts[i]);
         }
     }
-
+    function elelelel(){
+        console.log("okokokok");
+    }
     setName(newName){
         this._name = newName;
     }

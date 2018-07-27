@@ -29,19 +29,19 @@ function addTable(){
 document.getElementById("edit-restaurant").addEventListener("click", dragToggle);
 
 function dragToggle(){
+    document.getElementById("toggle").setAttribute("data-toggle", "none");
     let nodes = document.getElementsByClassName("table-container")[0].childNodes;
         for(var i=0; i<nodes.length; i++){
             if(nodes[i].nodeName.toLowerCase() == "div") {
                 nodes[i].style.pointerEvents = "auto";
-                document.getElementById("toggle").setAttribute("data-toggle", "none");
             }
         }
     }
 
-
 document.getElementById("stop").addEventListener("click", stop);
 
 function stop(){
+    console.log(makaron);
     let nodes = document.getElementsByClassName("table-container")[0].childNodes;
         for(var i=0; i<nodes.length; i++){
             if(nodes[i].nodeName.toLowerCase() == "div") {
@@ -58,17 +58,6 @@ function allowDrop(ev) {
 }
 window.allowDrop = allowDrop;
 
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-window.drag = drag;
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
-window.drop = drop;
 
 function receiptBox(display) {
     var receiptBox = document.getElementById("receipt-box");
