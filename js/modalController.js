@@ -10,11 +10,8 @@ export class ModalController{
             modal.style.fade = "transition: opacity .15s linear";
         }
     }
-    hideModal(){
-        console.log(modal);
-        modal.style.display= "none";
-    }
-    document.getElementsByClassName("close")[0].addEventListener("click",  hideModal);
-
-
-console.log("I am blue abutibadu daj adbidid dabudaj abidibadudaj");
+    // hideModal(){
+    //     console.log(modal);
+    //     modal.style.display= "none";
+    // }
+    // document.getElementsByClassName("close")[0].addEventListener("click",  hideModal);
