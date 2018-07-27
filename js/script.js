@@ -38,7 +38,6 @@ function dragToggle(){
         }
     }
 
-
 document.getElementById("stop").addEventListener("click", stop);
 
 function stop(){
@@ -58,17 +57,6 @@ function allowDrop(ev) {
 }
 window.allowDrop = allowDrop;
 
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-window.drag = drag;
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
-window.drop = drop;
 
 function receiptBox(display) {
     var receiptBox = document.getElementById("receipt-box");
