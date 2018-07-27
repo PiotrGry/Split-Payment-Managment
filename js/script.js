@@ -4,20 +4,55 @@ import * as ReceiptOperation from './createReceipt.js'
 import * as receiptView from './receiptView.js';
 import {TableView} from './tableView.js';
 import {TableController} from './tableController.js';
+import {ModalView} from './modalView.js';
+import {ModalController} from './modalController.js';
 //querySelectorAll
-
-document.getElementById("show-menu").addEventListener("click", addTable);
+var ID = function () {
+  // Math.random should be unique because of its seeding algorithm.
+  // Convert it to base 36 (numbers + letters), and grab the first 9 characters
+  // after the decimal.
+  return '_' + Math.random().toString(36).substr(2, 9);
+  };
+document.getElementById("add-table").addEventListener("click", addTable);
 
 function addTable(){
-    console.log("Add table: 1");
     let container = document.getElementsByClassName("table-container")[0];
     let tableController = new TableController();
     let tableView = new TableView(tableController);
-    console.log(tableView.id);
     container.appendChild(tableView.element);
-    tableView.element.setAttribute("id", tableView.id)
-    console.log("Add table: 2");
+    tableView.element.setAttribute("id", tableView.id);
+    let modalController = new ModalController();
+    let modalView = new ModalView(modalController,tableView, ID());
+    tableView.element.appendChild(modalView.element);
 }
+
+document.getElementById("edit-restaurant").addEventListener("click", dragToggle);
+
+function dragToggle(){
+    let nodes = document.getElementsByClassName("table-container")[0].childNodes;
+        for(var i=0; i<nodes.length; i++){
+            if(nodes[i].nodeName.toLowerCase() == "div") {
+                nodes[i].style.pointerEvents = "auto";
+                document.getElementById("toggle").setAttribute("data-toggle", "none");
+            }
+        }
+    }
+
+
+document.getElementById("stop").addEventListener("click", stop);
+
+function stop(){
+    let nodes = document.getElementsByClassName("table-container")[0].childNodes;
+        for(var i=0; i<nodes.length; i++){
+            if(nodes[i].nodeName.toLowerCase() == "div") {
+                nodes[i].style.pointerEvents = "none";
+                nodes[i].setAttribute("draggable", false);
+                document.getElementById("toggle").setAttribute("data-toggle", "modal");
+            }
+        }
+    }
+
+
 function allowDrop(ev) {
     ev.preventDefault();
 }

@@ -6,10 +6,15 @@ export class TableView {
         this.element = this.createElement();
         this.id = counterID++;
         this.addEventListeners();
+
     }
     render(){
-        return `<div draggable="true" class="col-md-4 col-sm-4 table-draggable" id="" style="top: 313px; left: 578px;">
+
+        return `<div draggable="false" class="col-md-4 col-sm-4 table-draggable d-flex justify-content-center align-items-center" id="" style="top: 313px; left: 578px;">
+               <a data-toggle = "modal" data-target="#exampleModalCenter" id="toggle">$</a>
                 </div>`;
+
+
     }
 
     createElement(){
@@ -24,4 +29,3 @@ export class TableView {
     }
 
 }
-// <a role="button" id="a-table"><img  id="table" src="../images/table-w.png" alt="table"></a>

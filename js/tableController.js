@@ -43,5 +43,7 @@ export class TableController{
            document.onmouseup = null;
            document.onmousemove = null;
         }
+        e.preventDefault();
     }
+
 }
