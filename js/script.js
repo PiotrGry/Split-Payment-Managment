@@ -41,6 +41,7 @@ function dragToggle(){
 document.getElementById("stop").addEventListener("click", stop);
 
 function stop(){
+    console.log(makaron);
     let nodes = document.getElementsByClassName("table-container")[0].childNodes;
         for(var i=0; i<nodes.length; i++){
             if(nodes[i].nodeName.toLowerCase() == "div") {
