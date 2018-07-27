@@ -14,4 +14,15 @@ export function closeReceiptBox() {
     });
     }
 
+    console.log("I am here to trigger the conflict");
+
+    function awesomeFunc(){
+        var sign = document.getElemntbyTagName("Body");
+        if(sign === ""){
+            console.log("Huston we got a problem");
+        }else{
+            console.log("I've got id dude!");
+        }
+    }
+
 }

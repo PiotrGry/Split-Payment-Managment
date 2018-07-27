@@ -58,26 +58,7 @@ export function createReceipt(){
             spanAddReceipt.className += "fas fa-plus-square";
             divHeader.appendChild(spanAddReceipt);
 
-            spanAddReceipt.onclick =  function(){
-                var li = document.createElement("Li");
-                li.id = idCounterOrder;
-                idCounterOrder+=2;
-                var att = document.createAttribute("draggable");
-                att.value = "true";
-                li.setAttributeNode(att);
-                var att1 = document.createAttribute("ondragstart");
-                att1.value = "drag(event)";
-                li.setAttributeNode(att1);
-                var textL1 = document.createTextNode("Placeholder");
-                var liCloseSpan = document.createElement("Span");
-                liCloseSpan.classList.add("close");
-                var closeSpanText = document.createTextNode("x");
-                list.appendChild(li);
-                li.appendChild(textL1);
-                li.appendChild(liCloseSpan);
-                liCloseSpan.appendChild(closeSpanText);
-            }
-
+            
 
 
 
