@@ -29,11 +29,11 @@ function addTable(){
 document.getElementById("edit-restaurant").addEventListener("click", dragToggle);
 
 function dragToggle(){
+    document.getElementById("toggle").setAttribute("data-toggle", "none");
     let nodes = document.getElementsByClassName("table-container")[0].childNodes;
         for(var i=0; i<nodes.length; i++){
             if(nodes[i].nodeName.toLowerCase() == "div") {
                 nodes[i].style.pointerEvents = "auto";
-                document.getElementById("toggle").setAttribute("data-toggle", "none");
             }
         }
     }
