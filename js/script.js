@@ -33,10 +33,11 @@ function dragToggle(){
         for(var i=0; i<nodes.length; i++){
             if(nodes[i].nodeName.toLowerCase() == "div") {
                 nodes[i].style.pointerEvents = "auto";
-                nodes[i].setAttribute("draggable", "true");
+                document.getElementById("toggle").setAttribute("data-toggle", "none");
             }
         }
     }
+
 
 document.getElementById("stop").addEventListener("click", stop);
 
@@ -45,7 +46,8 @@ function stop(){
         for(var i=0; i<nodes.length; i++){
             if(nodes[i].nodeName.toLowerCase() == "div") {
                 nodes[i].style.pointerEvents = "none";
-                nodes[i].setAttribute(false);
+                nodes[i].setAttribute("draggable", false);
+                document.getElementById("toggle").setAttribute("data-toggle", "modal");
             }
         }
     }

@@ -40,6 +40,13 @@ body{
 
 }
 
+#toggle{
+pointer-events: auto;
+font-size: 30px;
+font-weight: bold;
+
+}
+
 
 #receipt-box {
     position: absolute;
